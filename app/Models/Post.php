@@ -20,7 +20,10 @@ class Post extends Model
                 ->where('title', 'like', '%'. request('search'). '%')
                 ->Orwhere('body', 'like', '%'. request('search'). '%'));
     }
-
+    public function comments() 
+    {
+        return $this->hasMany(Comment::class);
+    }
     public function category() 
     {
         return $this->belongsTo(Category::class);
