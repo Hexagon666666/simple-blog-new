@@ -57,7 +57,7 @@
                     <!-- Formular fuer neuen Kommentar -->
 
                     <x-panel>
-                    <form method="POST" action="#">
+                    <form method="POST" action="/posts/{{ $post->slug }}/comments">
                         @csrf
 
                         <header class="flex items-center">
