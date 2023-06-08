@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostCommentsController;
 
 use App\Models\Post;
 use App\Models\Category;

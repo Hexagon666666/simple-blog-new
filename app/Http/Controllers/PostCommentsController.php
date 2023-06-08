@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostCommentsController extends Controller
@@ -12,7 +13,7 @@ class PostCommentsController extends Controller
         ]);
 
        $post->comments()->create([
-            'user_id' => request()->user()->id(),
+            'user_id' => 1, //request()->user()->id(),
             'body' => request('body')
        ]);
 
